@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <title>TodoList</title>
+</head>
+
+<body>
+    <div id="root">
+        <div class="container">
+            <header class="my-2">
+                <figure class="w-25 mx-auto">
+                    <img src="data:image/png;base64,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"
+                        class="img-fluid">
+                </figure>
+            </header>
+            <main class="w-50 mx-auto">
+                <ul class="list-group">
+                    <li v-for="task in tasks" class="list-group-item">
+                        <div>
+                            {{ task.text }}
+                        </div>
+                    </li>
+                </ul>
+            </main>
+        </div>
+    </div>
+
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>
