@@ -24,8 +24,11 @@
             <main class="w-50 mx-auto">
                 <ul class="list-group">
                     <li v-for="task in tasks" class="list-group-item">
-                        <div>
+                        <div v-if="task.done==true">
                             {{ task.text }}
+                        </div>
+                        <div v-else="false">
+                            <del>{{ task.text }}</del>
                         </div>
                     </li>
                 </ul>
